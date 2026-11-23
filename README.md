@@ -205,6 +205,12 @@ yarn db:up          # start Postgres
 yarn db:down        # stop Postgres
 ```
 
+## Contributing
+
+Commits follow [Conventional Commits](https://www.conventionalcommits.org/) in
+English, enforced by a commitlint hook and CI. See
+[CONTRIBUTING.md](./CONTRIBUTING.md).
+
 ## Author
 
 Built and maintained by **Eduardo Roque** — [@eroque55](https://github.com/eroque55).
