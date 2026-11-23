@@ -5,6 +5,7 @@ WORKDIR /app
 
 FROM base AS build
 COPY package.json yarn.lock prisma.config.ts ./
+COPY .husky/install.mjs ./.husky/
 COPY prisma ./prisma
 RUN yarn install --frozen-lockfile
 COPY . .

@@ -94,6 +94,14 @@ data is invalid. Clients show `detail`, and can map `errors[].pointer`
 when `NODE_ENV=test`. `main.ts` sets `trust proxy` to 1 hop so the limiter
 sees the client IP behind a load balancer; adjust it if you have more hops.
 
+## Git hooks in Docker
+
+`yarn install` runs the `prepare` script (`node .husky/install.mjs`), so the
+Dockerfile's build stage copies that file before installing. Without it the
+image build fails. Inside the image there is no `.git`, so husky only prints
+`.git can't be found` and moves on. `yarn install --production` skips
+`prepare`, which is why the production stage does not need it.
+
 ## Dependencies
 
 Run all verification commands after any bump. Dependabot waits 7 days before

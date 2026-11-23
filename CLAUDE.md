@@ -39,6 +39,7 @@ code in that area, not after something breaks.
 | Touch error handling or the response shape         | `.claude/gotchas.md` |
 | Change `schema.prisma` or anything Prisma          | `.claude/gotchas.md` |
 | Add, remove or bump a dependency                   | `.claude/gotchas.md` |
+| Write a commit message or open a PR                | `CONTRIBUTING.md`    |
 
 ## Non-negotiables
 
